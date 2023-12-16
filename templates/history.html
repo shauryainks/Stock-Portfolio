@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+
+<table class="historytable table">
+    <thead class="historytablehead">
+        <tr>
+            <th scope="col">Transacted</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Type</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</ </tr>
+    </thead>
+    <tbody>
+        <!-- TODO: Loop through the database entries to display them in this table -->
+        {% for i in history %}
+
+        {%if i['transaction_type'] == "buy" %}
+        <tr scope="row" class="buy">
+            <td>{{i['date']}}</td>
+            <td>{{i['share_symbol']}}</td>
+            <td>{{i['transaction_type']}}</td>
+            <td>{{i['share_qty']}}</td>
+            <td>{{i['share_price']|usd}}</td>
+
+        </tr>
+        {% else %}
+        <tr scope="row" class="sell">
+            <td>{{i['date']}}</td>
+            <td>{{i['share_symbol']}}</td>
+            <td>{{i['transaction_type']}}</td>
+            <td>{{i['share_qty']}}</td>
+            <td>{{i['share_price']|usd}}</td>
+
+        </tr>
+        {% endif %}
+        {% endfor%}
+    </tbody>
+</table>
+
+
+{% endblock %}

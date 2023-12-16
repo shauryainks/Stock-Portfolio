@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Portfolio
+{% endblock %}
+
+{% block main %}
+
+<body>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            {% for i in allportfolio %}
+            <tr scope="row">
+                <td>{{i['share_symbol']}}</td>
+                <td>{{i['share_name']}}</td>
+                <td>{{i['share_qty']}}</td>
+                <td>{{i['share_price']|usd}}</td>
+                <td>{{i['total']|usd}}</td>
+            </tr>
+            {% endfor%}
+
+            <tr scope="row">
+                <td colspan=3></td>
+                <td>Cash</td>
+                <td>{{cash|usd}}</td>
+            </tr>
+
+            <tr scope="row">
+                <td colspan=3></td>
+                <td>Total</td>
+                <td>{{allvalue|usd}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+{% endblock %}

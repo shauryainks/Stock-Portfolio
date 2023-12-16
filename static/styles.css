@@ -1,0 +1,50 @@
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue {
+    color: #537fbe;
+}
+
+nav .navbar-brand .red {
+    color: #ea433b;
+}
+
+nav .navbar-brand .yellow {
+    color: #f5b82e;
+}
+
+nav .navbar-brand .green {
+    color: #2e944b;
+}
+
+.historytable {
+    border: 1px solid black;
+    outline-color: black;
+}
+
+.historytablehead {
+    color: white;
+    background-color: black;
+}
+
+.buy {
+    color: green;
+    background-color: #bde19f;
+}
+
+.sell {
+    color: red;
+    background-color: #e19f9f;
+
+}
+
+.footdiv {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+}
