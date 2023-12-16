@@ -41,7 +41,7 @@ Make sure you have the following installed:
 
    ```bash
    git clone https://github.com/Shauryainks/Stock-Portfolio-Tracker.git
-   cd us-stock-portfolio-tracker
+   cd Stock-Portfolio-Tracker
    ```
 
 2. Install dependencies:
