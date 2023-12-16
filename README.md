@@ -53,7 +53,7 @@ Make sure you have the following installed:
 3. Run the application:
 
    ```bash
-   python application.py
+   flask run
    ```
 
 The application should be running on [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
